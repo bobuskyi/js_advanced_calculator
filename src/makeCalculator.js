@@ -26,8 +26,10 @@ function makeCalculator() {
 
       return this;
     },
-    operate(func, value) {
-      func.call(this, value);
+    operate(operation, value) {
+      if (typeof callback === 'function') {
+        operation.call(this, value);
+      }
 
       return this;
     },
