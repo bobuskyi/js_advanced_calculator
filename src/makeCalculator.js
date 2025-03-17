@@ -26,9 +26,9 @@ function makeCalculator() {
 
       return this;
     },
-    operate(operation, value) {
+    operate(callback, value) {
       if (typeof callback === 'function') {
-        operation.call(this, value);
+        callback.call(this, value);
       }
 
       return this;
